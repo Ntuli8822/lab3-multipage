@@ -1,0 +1,246 @@
+.title {
+    color: #00f7ffe7; 
+    font-size: 60px;
+    text-align: center; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+}
+
+body {
+    background: url('images/MyBackground2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color:  #ffffffe7;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav ul li {
+    display: inline; 
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(255, 254, 254);
+    text-decoration: none;
+    font-size: 25px;
+    padding: 20px 25px;
+    border-radius: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #00f7ff;
+    color: #333;
+}
+
+.content {
+    position: fixed; 
+    bottom: 0;
+    right: 0; 
+    display: flex; 
+    gap: 10px; 
+    padding: 20px;
+}
+
+.box {
+    background-color: #00f7ff;
+    color: black; 
+    padding: 15px 20px;
+    border-radius: 5px; 
+    text-align: center;
+    font-weight: bold;
+}
+
+.hero {
+    position: absolute; 
+    bottom: 60px; 
+    left: 44%; 
+    color:  white;
+    padding: 15px 20px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px; 
+    width: 80%; 
+}
+
+footer {
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 25px;
+    color: #ffffff;
+    padding: 20px 30px;
+    text-align: left; 
+}
+
+
+/* Flexbox Layout */
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+.flex-item {
+    background: #ffffff5e;
+    border: 1px solid #302e2e;
+    padding: 20px;
+    flex: 1;
+    margin: 10px;
+}
+
+/* Grid Layout */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+    color: rgb(9, 9, 54);
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold; 
+  }
+
+.service-card {
+    background-color: white;
+    border: 2px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif; 
+    font-size: 18px; 
+    font-weight: bold; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    height: 100%;
+.service-card img {
+    width: 100%;
+    height: 150px; 
+    object-fit: cover;
+.service-card h2 {
+    margin: 10px 0;
+    font-size: 22px;
+.service-card p {
+    flex-grow: 1; 
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    min-height: 60px; 
+    }
+ }    
+} 
+}  
+
+.contact-form {
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #02092c;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between form elements */
+}
+
+/* Label styles */
+.contact-form label {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Input and textarea styles */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Remove input field box shadow */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Submit button styling */
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #007bff;
+    color: rgb(0, 19, 70);
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Button hover effect */
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* 🔹 Media Query for Mobile View (480px) */
+@media (max-width: 480px) {
+    .contact-form {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .contact-form label {
+        font-size: 14px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .contact-form button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .content { flex-direction: column; }
+}
+
+@media (max-width: 768px) {
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+    .services-grid { grid-template-columns: 1fr; }
+}
+
+/* Animations */
+button:hover {
+    background-color: blue;
+    transition: 0.3s;
+}
+ 
